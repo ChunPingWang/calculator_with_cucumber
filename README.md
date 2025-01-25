@@ -39,3 +39,6 @@ mvn test
 
 8. 將提示內容覆蓋於 StepDefinitions.class，再執行一次 Maven 測試指令會看到不ㄧ樣的提示內容，表示  StepDefinitions.class 已被讀取
 <img width="924" alt="截圖 2025-01-26 凌晨1 05 41" src="https://github.com/user-attachments/assets/e5fee6b9-cc82-4867-b8c7-6b5a442b9d07" />
+
+9. 修改 StepDefinitions.class 並新增 Calculator.class 
+10. 執行 Maven 測試，完成此 Scenario: Add two numbers 測試與開發

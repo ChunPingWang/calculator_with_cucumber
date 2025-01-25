@@ -10,7 +10,7 @@ mvn archetype:generate                     \
 "-Dversion=1.0.0-SNAPSHOT"                 \
 "-DinteractiveMode=false"
 ```
-2. 查看專案結構
+2. 查看專案結構<BR>
 ![截圖 2025-01-26 凌晨12 43 41](https://github.com/user-attachments/assets/7b3ca6e5-7fe5-4ea1-89c5-cb6eaf5ec61d)
 
 4. 查看 example.feature 內容，此為 cucumber 自動建立

@@ -1,9 +1,0 @@
--------------------------------------------------------------------------------
-Test set: calculator.RunCucumberTest
--------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.082 s <<< FAILURE! -- in calculator.RunCucumberTest
-Calculator.Calculator - Add two numbers -- Time elapsed: 0.030 s <<< ERROR!
-io.cucumber.java.PendingException: TODO: implement me
-	at calculator.StepDefinitions.the_first_number_is(StepDefinitions.java:12)
-	at ✽.the first number is 50(classpath:calculator/calculator.feature:4)
-

@@ -5,26 +5,24 @@ import io.cucumber.java.en.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class StepDefinitions {
+    private Calculator calculator = new Calculator();
+    private int result;
 
     @Given("the first number is {int}")
     public void the_first_number_is(Integer int1) {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        calculator.firstNumber = int1;
     }
     @Given("the second number is {int}")
     public void the_second_number_is(Integer int1) {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        calculator.secondNumber = int1;
     }
     @When("the two numbers are added")
     public void the_two_numbers_are_added() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        this.result = calculator.add();
     }
     @Then("the result should be {int}")
     public void the_result_should_be(Integer int1) {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        assertEquals(int1, this.result);
     }
 
 

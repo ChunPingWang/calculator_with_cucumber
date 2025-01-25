@@ -11,13 +11,15 @@ mvn archetype:generate                     \
 "-DinteractiveMode=false"
 ```
 2. 查看專案結構<BR>
-![截圖 2025-01-26 凌晨12 43 41](https://github.com/user-attachments/assets/7b3ca6e5-7fe5-4ea1-89c5-cb6eaf5ec61d)
+![截圖 2025-01-26 凌晨12 43 41](https://github.com/user-attachments/assets/7a5c06bc-4309-4ef3-a6cb-5d2e42fa6d7e)
 
 4. 查看 example.feature 內容，此為 cucumber 自動建立
-![截圖 2025-01-26 凌晨12 47 33](https://github.com/user-attachments/assets/03646597-4ae5-42c3-8703-d83a47572a14)
+<img width="547" alt="截圖 2025-01-26 凌晨12 46 00" src="https://github.com/user-attachments/assets/49681c7e-1525-4150-9dff-8961bbb9163e" />
+
 
 5. 查看 StepDefinitions.class 內容，此為 cucumber 根據 example.feature 建立
-![截圖 2025-01-26 凌晨12 46 00](https://github.com/user-attachments/assets/85ab0ff0-1ee2-4dd1-8175-16f9c0a65685)
+<img width="424" alt="截圖 2025-01-26 凌晨12 47 33" src="https://github.com/user-attachments/assets/723a0179-b983-44c1-bc05-dfab2a8203ec" />
+
 
 6. 刪除 example.feature ，新增 calculator.feature，內容如下：
 ```gherkin
@@ -33,7 +35,7 @@ Feature: Calculator
 ```gherkin
 mvn test
 ```
-![截圖 2025-01-26 凌晨1.02.12.png](..%2F..%2F..%2F..%2FDesktop%2F%E6%88%AA%E5%9C%96%202025-01-26%20%E5%87%8C%E6%99%A81.02.12.png)
+<img width="718" alt="截圖 2025-01-26 凌晨1 02 12" src="https://github.com/user-attachments/assets/f5387c56-90bd-4b77-a22c-187e2f0e9a71" />
 
 8. 將提示內容覆蓋於 StepDefinitions.class，再執行一次 Maven 測試指令會看到不ㄧ樣的提示內容，表示  StepDefinitions.class 已被讀取
-![截圖 2025-01-26 凌晨1.05.41.png](..%2F..%2F..%2F..%2FDesktop%2F%E6%88%AA%E5%9C%96%202025-01-26%20%E5%87%8C%E6%99%A81.05.41.png)
+<img width="924" alt="截圖 2025-01-26 凌晨1 05 41" src="https://github.com/user-attachments/assets/e5fee6b9-cc82-4867-b8c7-6b5a442b9d07" />

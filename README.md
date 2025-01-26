@@ -187,7 +187,8 @@ StepDefinition.class 增加一個 method
     }
 ```
 
-13. 執行 Maven 測試，取得下列結果
+### 13. 執行 Maven 測試，取得下列結果
+![截圖 2025-01-27 凌晨12 04 34](https://github.com/user-attachments/assets/23b017f6-dad5-4df4-8b00-d014a97cce55)
 
 ### Appendix and FAQ
 

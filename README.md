@@ -152,6 +152,43 @@ public class StepDefinitions {
 mvn test
 ```
 
+### 12. 增加 Calculator 的減法功能
+calculator.feature 內容為
+```gherkin=
+Feature: Calculator
+
+  Scenario Outline: Add two numbers
+    Given the first number is <firstNumber>
+    And the second number is <secondNumber>
+    When the two numbers are added
+    Then the result should be <result>
+    Examples:
+      | firstNumber | secondNumber | result |
+      | 50          | 70           | 120    |
+
+
+  Scenario Outline: Subtracting two numbers
+    Given the first number is <firstNumber>
+    And the second number is <secondNumber>
+    When the first number subtract the second number
+    Then the result should be <result>
+    Examples:
+      | firstNumber | secondNumber | result |
+      | 70          | 50           | 20     |
+      | 50          | 70           | -20    |
+      | 50          | 50           | 0      |
+```
+
+StepDefinition.class 增加一個 method 
+```gherkin=
+@When("the first number subtract the second number")
+    public void theFirstNumberSubtractTheSecondNumber() {
+        this.result = this.calculator.subtract();
+    }
+```
+
+13. 執行 Maven 測試，取得下列結果
+
 ### Appendix and FAQ
 
 :::info

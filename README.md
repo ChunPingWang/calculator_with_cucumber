@@ -95,9 +95,9 @@ mvn test
 mvn test
 ```
 <img width="932" alt="截圖 2025-01-26 下午1 43 09" src="https://github.com/user-attachments/assets/e0dd79ee-ad30-4683-9d6f-8e96847c15e0" />
-#### 或是點選 calculator.feature 檔左邊的執行鈕
+> 或是點選 calculator.feature 檔左邊的執行鈕
 <img width="401" alt="截圖 2025-01-26 下午1 44 39" src="https://github.com/user-attachments/assets/6822dcb6-a644-48fb-a503-323a48c6e926" />
-#### 得到結果如下
+> 得到結果如下
 <img width="833" alt="截圖 2025-01-26 下午1 34 27" src="https://github.com/user-attachments/assets/4f0909b0-ef01-4628-84f2-7ed9934453c6" />
 
 ### 10. 修改 Gherkin，將數值改成表格，內容如下：

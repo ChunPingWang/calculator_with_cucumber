@@ -13,6 +13,54 @@ mvn archetype:generate                     \
 2. 查看專案結構<BR>
 ![截圖 2025-01-26 凌晨12 43 41](https://github.com/user-attachments/assets/7a5c06bc-4309-4ef3-a6cb-5d2e42fa6d7e)
 
+pom.xml 相關內容
+```gherkin
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>io.cucumber</groupId>
+                <artifactId>cucumber-bom</artifactId>
+                <version>7.20.1</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.junit</groupId>
+                <artifactId>junit-bom</artifactId>
+                <version>5.11.2</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <dependencies>
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-java</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-junit-platform-engine</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.junit.platform</groupId>
+            <artifactId>junit-platform-suite</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+```
+
 4. 查看 example.feature 內容，此為 cucumber 自動建立
 <img width="547" alt="截圖 2025-01-26 凌晨12 46 00" src="https://github.com/user-attachments/assets/49681c7e-1525-4150-9dff-8961bbb9163e" />
 

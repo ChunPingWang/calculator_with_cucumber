@@ -9,20 +9,20 @@ public class StepDefinitions {
     private int result;
 
     @Given("the first number is {int}")
-    public void the_first_number_is(Integer int1) {
-        calculator.firstNumber = int1;
+    public void the_first_number_is(Integer firstNumber) {
+        calculator.firstNumber = firstNumber;
     }
     @Given("the second number is {int}")
-    public void the_second_number_is(Integer int1) {
-        calculator.secondNumber = int1;
+    public void the_second_number_is(Integer secondNumber) {
+        calculator.secondNumber = secondNumber;
     }
     @When("the two numbers are added")
     public void the_two_numbers_are_added() {
         this.result = calculator.add();
     }
     @Then("the result should be {int}")
-    public void the_result_should_be(Integer int1) {
-        assertEquals(int1, this.result);
+    public void the_result_should_be(Integer result) {
+        assertEquals(result, this.result);
     }
 
 

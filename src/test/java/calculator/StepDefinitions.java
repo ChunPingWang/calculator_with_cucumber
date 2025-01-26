@@ -27,4 +27,9 @@ public class StepDefinitions {
         assertEquals(result, this.result);
     }
 
+
+    @When("the first number subtract the second number")
+    public void theFirstNumberSubtractTheSecondNumber() {
+        this.result = this.calculator.subtract();
+    }
 }

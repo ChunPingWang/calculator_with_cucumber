@@ -7,4 +7,8 @@ public class Calculator {
     public int add() {
         return this.firstNumber + this.secondNumber;
     }
+
+    public int subtract() {
+        return this.firstNumber - this.secondNumber;
+    }
 }

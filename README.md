@@ -42,3 +42,7 @@ mvn test
 
 9. 修改 StepDefinitions.class 並新增 Calculator.class 
 10. 執行 Maven 測試，完成此 Scenario: Add two numbers 測試與開發
+```gherkin
+mvn test
+```
+<img width="833" alt="截圖 2025-01-26 下午1 34 27" src="https://github.com/user-attachments/assets/4f0909b0-ef01-4628-84f2-7ed9934453c6" />

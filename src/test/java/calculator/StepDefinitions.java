@@ -7,23 +7,24 @@ import static org.junit.jupiter.api.Assertions.*;
 public class StepDefinitions {
     private Calculator calculator = new Calculator();
     private int result;
-
     @Given("the first number is {int}")
-    public void the_first_number_is(Integer firstNumber) {
-        calculator.firstNumber = firstNumber;
+    public void theFirstNumberIs(Integer firstNumber) {
+       this.calculator.firstNumber = firstNumber;
     }
-    @Given("the second number is {int}")
-    public void the_second_number_is(Integer secondNumber) {
-        calculator.secondNumber = secondNumber;
+
+    @And("the second number is {int}")
+    public void theSecondNumberIs(Integer secondNumber) {
+        this.calculator.secondNumber = secondNumber;
     }
+
     @When("the two numbers are added")
-    public void the_two_numbers_are_added() {
-        this.result = calculator.add();
+    public void theTwoNumbersAreAdded() {
+        this.result = this.calculator.add();
     }
+
     @Then("the result should be {int}")
-    public void the_result_should_be(Integer result) {
+    public void theResultShouldBe(Integer result) {
         assertEquals(result, this.result);
     }
-
 
 }

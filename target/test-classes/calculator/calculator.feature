@@ -1,7 +1,11 @@
 Feature: Calculator
 
-Scenario: Add two numbers
-    Given the first number is 50
-    And the second number is 70
+Scenario Outline: Add two numbers
+    Given the first number is <firstNumber>
+    And the second number is <secondNumber>
     When the two numbers are added
-    Then the result should be 120
+    Then the result should be <result>
+
+    Examples:
+      | firstNumber | secondNumber | result |
+      | 50          | 70           | 120    |

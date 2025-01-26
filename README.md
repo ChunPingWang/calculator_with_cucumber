@@ -50,3 +50,55 @@ mvn test
 <img width="401" alt="截圖 2025-01-26 下午1 44 39" src="https://github.com/user-attachments/assets/6822dcb6-a644-48fb-a503-323a48c6e926" />
 得到結果如下
 <img width="833" alt="截圖 2025-01-26 下午1 34 27" src="https://github.com/user-attachments/assets/4f0909b0-ef01-4628-84f2-7ed9934453c6" />
+
+11. 修改 Gherkin，將數值改成表格，內容如下：
+```gherkin
+Feature: Calculator
+
+Scenario Outline: Add two numbers
+    Given the first number is <firstNumber>
+    And the second number is <secondNumber>
+    When the two numbers are added
+    Then the result should be <result>
+
+    Examples:
+      | firstNumber | secondNumber | result |
+      | 50          | 70           | 120    |
+```
+修改 StepDefinitions.class 如下：
+```gherkin
+package calculator;
+
+import io.cucumber.java.en.*;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+public class StepDefinitions {
+    private Calculator calculator = new Calculator();
+    private int result;
+    @Given("the first number is {int}")
+    public void theFirstNumberIs(Integer firstNumber) {
+       this.calculator.firstNumber = firstNumber;
+    }
+
+    @And("the second number is {int}")
+    public void theSecondNumberIs(Integer secondNumber) {
+        this.calculator.secondNumber = secondNumber;
+    }
+
+    @When("the two numbers are added")
+    public void theTwoNumbersAreAdded() {
+        this.result = this.calculator.add();
+    }
+
+    @Then("the result should be {int}")
+    public void theResultShouldBe(Integer result) {
+        assertEquals(result, this.result);
+    }
+
+}
+```
+12. 執行 Maven 測試成功，得到與之前一樣結果
+```gherkin
+mvn test
+```
